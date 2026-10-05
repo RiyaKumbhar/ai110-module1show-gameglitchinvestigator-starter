@@ -27,7 +27,18 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - [ ] Describe the game's purpose.
 - [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Explain what fixes you applied.
+
+### Fixes applied
+
+- **Swapped hints:** `check_guess` told players to go higher when the guess was too high. The hints now point the right way.
+- **Secret turned into a string:** on even attempts the secret was converted to a string, which broke the comparison. It is now always compared as a number.
+- **Hard range:** Hard was 1-50, easier than Normal. It is now 1-200.
+- **New Game:** it now resets status, score and history, and picks the secret from the selected difficulty range.
+- **Attempts and banner:** attempts start at 0, and the info banner shows the real range instead of always "1 and 100".
+- **Scoring:** a win scores `100 - 10 * attempts` (minimum 10), and every wrong guess costs 5 points.
+- **Difficulty change:** switching difficulty now starts a fresh game.
+- **Refactor and tests:** the game logic moved from `app.py` into `logic_utils.py`, and `tests/test_game_logic.py` now has 5 passing pytest tests, including ones for hint direction and the Hard range.
 
 ## 📸 Demo Walkthrough
 
