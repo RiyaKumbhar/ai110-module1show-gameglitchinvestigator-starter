@@ -59,6 +59,15 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # ========================= X passed in 0.XXs =========================
 ```
 
+## ✅ Running the Tests
+
+```
+pip install pytest
+pytest -v
+```
+
+All 5 tests in `tests/test_game_logic.py` should pass. They cover winning, too-high and too-low outcomes, the hint direction, and the Hard difficulty range.
+
 ## 🚀 Stretch Features
 
 - [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
